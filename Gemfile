@@ -7,12 +7,12 @@ gem 'rails', '3.0.10'
 
 # gem 'sqlite3'
 # gem 'sqlite3-ruby', '1.2.5', :require => 'sqlite3'
-gem 'mysql2', '< 0.3'
+gem 'mysql2', '< 0.3' 
 # gem "mongoid"
 # gem 'mongoid_taggable'
 # gem 'mongoid_fulltext'
 # gem "bson_ext"
-gem 'heroku'
+# gem 'heroku'
 gem 'kaminari'
 gem 'acts-as-taggable-on', '~>2.1.0'
 

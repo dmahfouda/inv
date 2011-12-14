@@ -13,13 +13,13 @@
     <td><%= thing_link(thing) %></td>
     <td class="thing-details"><%= thing.details %></td>
     <td>
-      <% thing.owners.each do |owner| %>
-        <%= account_link(owner) %>
+      <% thing.accounts.each do |account| %>
+        <%= link_to account%>
       <% end %>
     </td>
     <td>
-      <% thing.caretakers.each do |caretaker| %>
-        <%= account_link(caretaker) %>
+      <% thing.accounts.each do |account| %>
+        <%= link_to account%>
       <% end %>
     </td>
     <td><%= place_link(thing.place) unless thing.place.nil? %></td>

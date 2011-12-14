@@ -30,8 +30,8 @@ class ThingsController < ApplicationController
       @thing = @clone.clone
     end
 
-    @owner_ids = params[:owner_ids] unless params[:owner_ids].nil?
-    @caretaker_ids = params[:caretaker_ids] unless params[:caretaker_ids].nil?
+    # @owner_ids = params[:owner_ids] unless params[:owner_ids].nil?
+    # @caretaker_ids = params[:caretaker_ids] unless params[:caretaker_ids].nil?
     @thing.place_id = params[:place_id] unless params[:place_id].nil?
 
     respond_to do |format|
@@ -48,7 +48,7 @@ class ThingsController < ApplicationController
   # POST /things
   # POST /things.xml
   def create
-    params[:thing][:place_id] = place_id_from_form
+    #params[:thing][:place_id] = place_id_from_form
     @thing = Thing.new(params[:thing])
     
     respond_to do |format|
@@ -67,8 +67,8 @@ class ThingsController < ApplicationController
   def update
     @thing = Thing.find(params[:id])
     params[:thing][:place_id] = place_id_from_form
-    params[:thing][:owner_ids] = [ ] if params[:thing][:owner_ids].nil?
-    params[:thing][:caretaker_ids] = [ ] if params[:thing][:caretaker_ids].nil?
+    # params[:thing][:owner_ids] = [ ] if params[:thing][:owner_ids].nil?
+    # params[:thing][:caretaker_ids] = [ ] if params[:thing][:caretaker_ids].nil?
 
     respond_to do |format|
       if @thing.update_attributes(params[:thing])

@@ -12,7 +12,7 @@ development:
   database: inv_development
   pool: 5
   username: root
-  password:
+  password: k1ndn377
   socket: /private/tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
@@ -24,7 +24,7 @@ test:
   database: inv_test
   pool: 5
   username: root
-  password:
+  password: k1ndn377
   socket: /private/tmp/mysql.sock
 
 production:

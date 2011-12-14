@@ -13,11 +13,11 @@
 
   <div id="owners-select" class="field">
     <%= f.label 'Owners' %><br />
-    <%= select_tag "thing[owner_ids]", options_from_collection_for_select(Account.all, :id, :username, @owner_ids), { :multiple => true } %>
+    <%= select_tag "thing[accounts]", options_from_collection_for_select(Account.all, :id, :username, @thing.accounts.account_id), { :multiple => true } %> <!, @owner_ids ->
   </div>  
   <div class="field">
     <%= f.label 'Caretakers' %><br />
-    <%= select_tag "thing[caretaker_ids]", options_from_collection_for_select(Account.all, :id, :username, @caretaker_ids), { :multiple => true } %>
+    <%= select_tag "thing[accounts]", options_from_collection_for_select(Account.all, :id, :username), { :multiple => true } %> <!, @caretaker_ids ->
   </div>
   <div id="name-field" class="field">
     <%= f.label :name %><br />

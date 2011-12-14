@@ -4,8 +4,8 @@
 
 <p>
   <b>Owners:</b>
-  <% @thing.owners.each do |owner| %>
-    <%= account_link(owner) %> 
+  <% @thing.accounts.each do |account| %>
+    <%= link_to account%> 
   <% end %>
 </p>
 
@@ -23,14 +23,14 @@
 
 <p>
   <b>Tags:</b>
-  <% @thing.tags_array.each do |tag| %>
+  <% @thing.tags.each do |tag| %>
     <%= link_to tag, tag_things_path(:tag => tag) %> 
   <% end %>
 </p>
 
 <p>
   <b>Caretakers:</b>
-  <% @thing.caretakers.each do |caretaker| %>
+  <% @thing.accounts.each do |caretaker| %>
     <%= account_link(caretaker) %> 
   <% end %>
 </p>
