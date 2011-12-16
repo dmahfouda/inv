@@ -5,7 +5,7 @@
 <p>
   <b>Owners:</b>
   <% @thing.accounts.each do |account| %>
-    <%= link_to account%> 
+    <%= account_link(username) %> 
   <% end %>
 </p>
 

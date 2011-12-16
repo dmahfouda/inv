@@ -13,7 +13,7 @@
 
   <div id="owners-select" class="field">
     <%= f.label 'Owners' %><br />
-    <%= select_tag "thing[accounts]", options_from_collection_for_select(Account.all, :id, :username, @thing.accounts.account_id), { :multiple => true } %> <!, @owner_ids ->
+    <%= select_tag :accounts, options_from_collection_for_select(Account.all, :id, :username), { :multiple => true } %>
   </div>  
   <div class="field">
     <%= f.label 'Caretakers' %><br />
